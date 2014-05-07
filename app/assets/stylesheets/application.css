@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap.min.css
+ *= require_self
+ *= require_tree .
+ //= require rails_bootstrap_forms
+ */
+
+body.newsession{
+	text-align: center;
+	background-image: url("http://eventstepandrepeat.com/media/backgrounds/bg1.jpg");
+	background-size: cover;
+	color: white;
+	margin-top: 30px;
+}
+
+/*http://www.sweetpaul.com/wp-content/uploads/2012/11/binary-sunset.png*/
+
+.homelogo{
+	margin-top: 40px;
+}
+
+/*http://www.resolutionwall.com/wp-content/uploads/2014/03/futuristic-wallpaper-5.jpg*/
+/*http://abacusrx.us/Movie_background.jpg*/
+/*http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2012/11/Films.jpg*/
+/*http://hqwide.com/wallpapers/l/1280x800/38/artwork_the_avengers_hawkeye_movie_white_background_1280x800_37401.jpg*/
+
+body.dashboard{
+	text-align: center;
+	background-image: url("http://i.imgur.com/MuCZcFg.jpg");
+	background-size: cover;
+	color: black;
+}
+
+body.show{
+	text-align: center;
+	background-image: url("http://www.sweetpaul.com/wp-content/uploads/2012/11/binary-sunset.png");
+	background-size: cover;
+	color: white;
+	
+}
+
+body.results{
+	text-align: center;
+	background-image: url("http://abacusrx.us/Movie_background.jpg");
+	background-size: cover;
+	color: white;
+}
+
+.search{
+	margin-top: 40px;
+}
+
+a{text-decoration: underline; color: white;}
+a:visited {text-decoration: none}
+a:active {text-decoration: none}
+a:hover {text-decoration: underline; color: red;}
+
+input, select, textarea { 
+color: black; 
+}
+
+table {
+	border-spacing: 0.5rem;
+	text-align: center;
+}
+
+td{
+ 	border: 1px solid #999;
+  	padding: 0.5rem;	
+}
+
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center;
+}
+
