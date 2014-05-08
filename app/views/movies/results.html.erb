@@ -1,37 +1,53 @@
 <body class="results">
- 	<% if signed_in? %>
-		Logged in as <%= current_user.display_name %>
-		<%= link_to "Log out", logout_path, :class=>"btn btn-danger" %>
-	<% else %>
-		<%= link_to "Sign Up", signup_path,  :class=>"btn btn-primary"%> or
-		<%= link_to "Log In", login_path, :class=>"btn btn-primary"%>
-	<% end %>
-	
-	<%= link_to "Back to profile", home_path %>
 
-<div>Created : <%= @movie.created_at %></div>
+	<div class="favorites">
+		<%= link_to("Add to favorites", favorites_path(@movie), method: :post, :class => "btn btn-success")%>
 
-<div class="show">
+		<%= form_for @favorite, :url => url_for(:controller => "movies", :action => "update") do |f| %>
+      			<%= f.label :comment %>
+      			<%= f.text_field :comment %>
+<br />
+      			<%= f.label :rating %>
+      			<%= f.text_field :rating %>
+<br />
+   	  			<%= f.submit "Add your comment and rating",  class: "btn btn-large btn-primary" %>
+      <%end %>
+	</div>
+
 	<div class="poster">
 		<img src= "<%= @infodata["Poster"] %>" /> 
 	</div>
-	<br />
 
-	<strong>IMDb Link:</strong><br /><a href='http://www.imdb.com/title/<%=@link%>'> <%= @infodata["Title"] %></a>
-	<br />
+<h1><%= @infodata["Title"] %></h1>
 
-	<strong>Plot:</strong><br /><%= @infodata["Plot"] %>			<br />
-	<strong>Year:</strong><br /><%= @infodata["Year"] %>			<br />
-	<strong>Rating:</strong><br /><%= @infodata["Rated"] %>			<br />
-	<strong>Runtime:</strong><br /><%= @infodata["Runtime"] %>   	<br />
-	<strong>Genre:</strong><br /><%= @infodata["Genre"] %>			<br />
-	<strong>Director:</strong><br /><%= @infodata["Director"] %>	<br />
-	<strong>Actors:</strong><br /><%= @infodata["Actors"] %>		<br />
+	<%= @infodata["Plot"] %>			
+
+<br />
+<br />
+
+<table style="margin:auto;">
+	<tr>
+		<th>Year</th>
+		<th>Rated</th>
+		<th>Runtime</th>
+		<th>Genre</th>
+		<th>Director</th>
+		<th>Actors</th>
+		<th>IMDB Link</th>
+	</tr>
+	<tr>
+		<td> <%= @infodata["Year"] %> </td>
+		<td> <%= @infodata["Rated"] %> </td>
+		<td> <%= @infodata["Runtime"] %> </td>
+		<td> <%= @infodata["Genre"] %> </td>
+		<td> <%= @infodata["Director"] %> </td>
+		<td> <%= @infodata["Actors"] %> </td>
+		<td> <a href='http://www.imdb.com/title/<%=@link%>'> <%= @infodata["Title"] %></a> </td>
+	</tr>
+</table>
+<br />
 
 	<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/<%=@var3%>" allowfullscreen frameborder="0">
 	</iframe>
 
-<br />
-
-</div>
 </body>

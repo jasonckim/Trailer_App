@@ -2,12 +2,7 @@ class MoviesController < ApplicationController
 before_filter :signed_in_user, only: [:show, :results]
 
 def dashboard
-  @movies = Movie.find_by_user_id(current_user.id)
-  # on dashboard method, 
-      # recall imdbID and title from database where user_id = current_user.id
-      # @movies = Movie.find_by_user_id(current_user.id)
-  # on dashboard page, build the link using title as the text and the imdbID
-  # to build the link.
+  @favorite_movies = current_user.favorites
 end
 
 def show
@@ -25,10 +20,6 @@ def results
   @title = @infodata["Title"]
 
   @movie = Movie.find_or_create_by(imdbID: @link, title: @title)
-  # Movie.create(imdbID: imbdID, title: @title, user_id: current_user.id)
-  #end 
-  # create a new table with user_id, imdb_id and title fields
-  # need to save imdb_id and @title in database with current_user.id
    
   response = Typhoeus.get("https://api.themoviedb.org/3/movie/#{@link}?api_key=#{ENV['MOVIE_KEY']}")
   trailerid = JSON.parse(response.body)
@@ -36,15 +27,22 @@ def results
   var = Typhoeus.get("https://api.themoviedb.org/3/movie/#{@called}/videos?api_key=#{ENV['MOVIE_KEY']}")
   var2 = JSON.parse(var.body)
   @var3 = var2["results"][0]["key"]
+  # preparing @favorite for the form
+  @favorite = Favorite.find_by_movie_id(@movie) || Favorite.new
+
 end
 
-# def fav
-#     @id = params[:id] #store the track id
-#     @favs = Favorite.new
-#     @favs.imdb_id = @id
-#     @favs.user_id = http://current_user.id 
-#     @favs.save
-#     redirect_to profile_path
-#   end
+def update
+  @movie = Movie.find_by_imdbID(params[:imdbID])
+  @favorite = Favorite.find_by_movie_id(@movie)
+  @favorite.update favorite_params
+  @favorite.save
+  redirect_to home_path
+end
+
+private
+  def favorite_params
+    params.require(:favorite).permit(:rating, :comment)
+  end
 
 end

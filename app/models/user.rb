@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   
-  has_many :movies
+  has_many :favorites
   has_secure_password
   
   validates :display_name, presence: true, length: {maximum: 50}
