@@ -1,10 +1,9 @@
 <% content_for :body_type do%>
-results<% end %>
+results<% end %> 
 
-	<div class="favorites">
-		<%= link_to("Add to favorites", favorites_path(@movie), method: :post, :class => "btn btn-success")%>
-
-		<%= form_for @favorite, :url => url_for(:controller => "movies", :action => "update") do |f| %>
+<ul class="nav nav-pills">
+  <li class="active"><%= link_to("Add to favorites", favorites_path(@movie), method: :post, :class => "btn btn-success")%></li>
+  <li>	<%= form_for @favorite, :url => url_for(:controller => "movies", :action => "update") do |f| %>
       			<%= f.label :comment %>
       			<%= f.text_field :comment %>
 <br />
@@ -12,12 +11,17 @@ results<% end %>
       			<%= f.text_field :rating %>
 <br />
    	  			<%= f.submit "Add your comment and rating",  class: "btn btn-large btn-primary" %>
-      <%end %>
-	</div>
+      <%end %> 
+  </li>
+</ul>
 
 	<div class="poster">
 		<img src= "<%= @infodata["Poster"] %>" /> 
 	</div>
+<br />
+<br />
+<br />
+<br />
 
 <h1><%= @infodata["Title"] %></h1>
 
@@ -50,3 +54,4 @@ results<% end %>
 
 	<iframe class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/<%=@var3%>" allowfullscreen frameborder="0">
 	</iframe>
+

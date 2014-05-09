@@ -56,11 +56,6 @@ img{
 	color: white;
 }
 
-.favorites{
-	text-align: right;
-	margin-right:25px;
-}
-
 .usernew{
 	text-align: center;
 	background-image: url("http://www.resolutionwall.com/wp-content/uploads/2014/03/futuristic-wallpaper-5.jpg");
@@ -99,5 +94,15 @@ th {
 
 .poster{
 	float:left;
+	margin:0 0 10px 10px;
+	border: 5px solid gray;
 }
 
+.favorites{
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+.nav-pills{
+	float: right;
+}
