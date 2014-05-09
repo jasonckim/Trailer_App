@@ -12,6 +12,7 @@ require "sprockets/railtie"
 # Bundler.require(*Rails.groups)
 Bundler.require(*Rails.groups(assets: %w(development test production)))
 
+
 module TrailerApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
