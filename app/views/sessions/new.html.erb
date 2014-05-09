@@ -1,8 +1,7 @@
 <% content_for :body_type do%>
-newsession<% end %>
-  <div class="homelogo">
+newsession<%end %>
+
     <img src="http://i.imgur.com/aoT9Yec.png" title="Hosted by imgur.com"/>
-  </div>
 
   <div class="row">
     <div class="col-md-6 col-sm-6 col-md-offset-3 col-sm-offset-3">
@@ -14,11 +13,9 @@ newsession<% end %>
         <%= f.submit "Sign in",  class: "btn btn-large btn-primary" %>
       <% end %>
 
-  <div class="indexleft">
     <h3>What's on your list?</h3>
       <p>An interactive website designed to </p>
       <p>help keep track of your movies </p>
-  </div>
 <br />
       <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 
