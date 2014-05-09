@@ -14,7 +14,7 @@
  *= require rails_bootstrap_forms
  */
 
-.new{
+.sessionnew{
 	text-align: center;
 	background-image: url("http://i.imgur.com/llK0i55.jpg");
 	background-size: cover;
@@ -61,7 +61,7 @@
 	margin-right:25px;
 }
 
-.new{
+.usernew{
 	text-align: center;
 	background-image: url("http://www.resolutionwall.com/wp-content/uploads/2014/03/futuristic-wallpaper-5.jpg");
 	background-size: cover;
