@@ -14,7 +14,7 @@
  *= require rails_bootstrap_forms
  */
 
-.newsession{
+body.newsession{
 	text-align: center;
 	background-image: url("http://eventstepandrepeat.com/media/backgrounds/bg1.jpg");
 	background-size: cover;
