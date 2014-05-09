@@ -14,7 +14,7 @@
  *= require rails_bootstrap_forms
  */
 
-.newsession{
+.new{
 	text-align: center;
 	background-image: url("http://i.imgur.com/llK0i55.jpg");
 	background-size: cover;
