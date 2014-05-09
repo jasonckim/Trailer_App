@@ -1,4 +1,5 @@
-<body class="results">
+<% content_for :body_type do%>
+results<% end %>
 
 	<div class="favorites">
 		<%= link_to("Add to favorites", favorites_path(@movie), method: :post, :class => "btn btn-success")%>
@@ -49,5 +50,3 @@
 
 	<iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/<%=@var3%>" allowfullscreen frameborder="0">
 	</iframe>
-
-</body>

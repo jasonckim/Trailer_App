@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= yield :body_type %>">
 	<ul class="nav nav-tabs">
     <li class="active"><a href="/home">Home</a></li>
     <li>  <% if signed_in? %>
@@ -17,6 +17,7 @@
 
 
 <%= yield %>
+
 
 </body>
 </html>
