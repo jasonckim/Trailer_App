@@ -1,28 +1,25 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Requirements:
+- This app requires Ruby 2 and Rails 4
 
-Things you may want to cover:
+== Welcome to A-List!
+- Use this web-app to search and keep track of movies that you're interested in!
 
-* Ruby version
+== Home Page:
+- You will be prompted to either log in or sign up.
 
-* System dependencies
+== Sign up: 
+- Please enter valid parameters: Display Name, Email, and Password.
 
-* Configuration
+== Dashboard:
+- Once you are signed in, you will be directed to your own personal dashboard page.  Here, it will keep track of what movies you are interested in, and will keep track of your comments/ratings.
+- To add new movies, search for movie titles below.
 
-* Database creation
+== Search Results:
+- This page displays the results of your search by movie title and year.
 
-* Database initialization
+== Movie Show Page:
+- This page shows you all the information about the movie, and allow you to favorite the movie.
+- You will also be able to add a comment and a number rating system (1-5).
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
