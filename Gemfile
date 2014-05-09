@@ -5,8 +5,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -50,6 +48,7 @@ end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'pg'
   gem 'sdoc', require: false
 end
 

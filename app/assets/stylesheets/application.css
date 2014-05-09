@@ -14,9 +14,9 @@
  *= require rails_bootstrap_forms
  */
 
-body.newsession{
+.newsession{
 	text-align: center;
-	background-image: url("http://eventstepandrepeat.com/media/backgrounds/bg1.jpg");
+	background-image: url("http://i.imgur.com/llK0i55.jpg");
 	background-size: cover;
 	color: white;
 	margin-top: 30px;
@@ -25,6 +25,7 @@ body.newsession{
 /*http://www.sweetpaul.com/wp-content/uploads/2012/11/binary-sunset.png*/
 
 .homelogo{
+	text-align: center;
 	margin-top: 40px;
 }
 
@@ -33,14 +34,14 @@ body.newsession{
 /*http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2012/11/Films.jpg*/
 /*http://hqwide.com/wallpapers/l/1280x800/38/artwork_the_avengers_hawkeye_movie_white_background_1280x800_37401.jpg*/
 
-body.dashboard{
+.dashboard{
 	text-align: center;
 	background-image: url("http://i.imgur.com/vqO5OeQ.jpg");
 	background-size: cover;
 	color: white;
 }
 
-body.show{
+.show{
 	text-align: center;
 	background-image: url("http://www.sweetpaul.com/wp-content/uploads/2012/11/binary-sunset.png");
 	background-size: cover;
@@ -48,7 +49,7 @@ body.show{
 	
 }
 
-body.results{
+.results{
 	text-align: center;
 	background-image: url("http://abacusrx.us/Movie_background.jpg");
 	background-size: cover;
@@ -60,7 +61,7 @@ body.results{
 	margin-right:25px;
 }
 
-body.new{
+.new{
 	text-align: center;
 	background-image: url("http://www.resolutionwall.com/wp-content/uploads/2014/03/futuristic-wallpaper-5.jpg");
 	background-size: cover;
