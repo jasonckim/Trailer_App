@@ -11,5 +11,5 @@ require 'spec_helper'
 #   end
 # end
 describe FavoritesHelper do
-  
+
 end

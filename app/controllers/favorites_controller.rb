@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-  
   def index
     @favorites = current_user.favorites
   end
@@ -20,4 +19,3 @@ class FavoritesController < ApplicationController
     redirect_to home_path
   end
 end
-
