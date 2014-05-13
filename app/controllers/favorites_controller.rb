@@ -13,6 +13,7 @@ class FavoritesController < ApplicationController
     redirect_to home_path
   end
 
+  # No authentication? or authorization?
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy

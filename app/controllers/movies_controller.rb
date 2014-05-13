@@ -1,6 +1,8 @@
 class MoviesController < ApplicationController
 before_filter :signed_in_user, only: [:show, :results]
 
+#What about protecting all the other actions?
+
 def dashboard
   @favorite_movies = current_user.favorites
 end
@@ -32,6 +34,7 @@ def results
 
 end
 
+  # Is this method protected or can any user change any favourite?
 def update
   @movie = Movie.find_by_imdbID(params[:imdbID])
   @favorite = Favorite.find_by_movie_id(@movie)
