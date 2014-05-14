@@ -23,7 +23,8 @@ class MoviesController < ApplicationController
 
     @movie = Movie.find_or_create_by(imdbID: @link, title: @title)
 
-    response = Typhoeus.get("https://api.themoviedb.org/3/movie/#{@link}?api_key=#{ENV['MOVIE_KEY']}")
+    themoviedb_url = "https://api.themoviedb.org/3/movie/#{@link}?api_key=#{ENV['MOVIE_KEY']}"
+    response = Typhoeus.get(themoviedb_url)
     trailerid = JSON.parse(response.body)
     @called = trailerid['id']
     var = Typhoeus.get("https://api.themoviedb.org/3/movie/#{@called}/videos?api_key=#{ENV['MOVIE_KEY']}")

@@ -70,14 +70,13 @@ Nice work Jason
 	* Review:Not too bad, but could be more picky about indentation
 * Follows naming conventions
 	* Expectation: Naming follows best practices (semantic variable naming)
-	* Review:Yes
+	* Review:Yes, except in hard methods :)
 * Secure
 	* Expectation: Authorization is implemented as well as authentication.  Athorization is achieved through controller methods or helpers that limit resources
 	* Review:Implementedn authentication but not used often in the app
 * Documenting Work
 	* Expectation: Public presentation of work involving key aspects of development process
-	* Review:--The default README.rdoc is still present, this should be changed to represent your project
-
+	* Review:++YEAY! Great readme
 
 #Your Gemfile
 
