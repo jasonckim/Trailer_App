@@ -24,9 +24,12 @@ dashboard<% end %>
 
 <br />
 
+
+<!-- This in invalid HTML, the DIV tag is not closed and the H2 / h1 tags don't match (CORRECTED) -->
 <div class="search-form">
-		<h2>Search for a new movie to add:</h1>
+		<h2>Search for a new movie to add:</h2>
 			<form action="/search" method="get">
 				<input id="movie" name="movie" type="text" placeholder="Search any movie" />
 				<input name="commit" type="submit" value="Search"/>
 	 		</form>
+</div>
