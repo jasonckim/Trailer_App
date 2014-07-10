@@ -1,20 +1,6 @@
 <% content_for :body_type do%>
 results<% end %> 
 
-<ul class="nav nav-pills">
-  <li class="active"><%= link_to("Add to favorites", favorites_path(@movie), method: :post, :class => "btn btn-success")%></li>
-  <li>	<%= form_for @favorite, :url => url_for(:controller => "movies", :action => "update") do |f| %>
-      			<%= f.label :comment %>
-      			<%= f.text_field :comment %>
-<br />
-      			<%= f.label :rating %>
-      			<%= f.text_field :rating %>
-<br />
-   	  			<%= f.submit "Add your comment and rating",  class: "btn btn-large btn-primary" %>
-      <%end %> 
-  </li>
-</ul>
-
 	<div class="poster">
 		<img src= "<%= @infodata["Poster"] %>" /> 
 	</div>

@@ -1,9 +1,13 @@
 TrailerApp::Application.routes.draw do
 
-resources :users
+resources :users do
+  get 'search', on: :collection
+end
 # resources :favorites, :only => [:index, :create, :destroy]
 resources :sessions
-root to: 'sessions#new'
+root to: 'movies#dashboard'
+
+# get 'search', to: 'movies#search', as: 'moviesearch', on: collection 
 
 get '/favorites', to: 'favorites#index', as: 'favorite'
 post '/favorites/:id', to: 'favorites#create', as: 'favorites'

@@ -1,0 +1,25 @@
+
+<% @moviesearch.each do |user| %>
+    <li>
+    	<%= user.display_name%>
+    </li>
+<% end %>
+
+<form action="/search" method="get">
+	<input id="search" name="search" type="text"/>
+</form>
+
+
+	<form action="/search" method="get">
+				<input id="movie" name="movie" type="text" placeholder="Search any movie" />
+				<input name="commit" type="submit" value="Search"/>
+	 		</form>
+
+
+<%= seach_form_for @moviesearch do |f| %>
+
+  <%= f.label_tag(:display_name, "name:") %>
+  <%= f.text_field :display_name %></br>
+
+  <%= f.submit "Create", :class => "btn btn-info" %>
+<% end %>

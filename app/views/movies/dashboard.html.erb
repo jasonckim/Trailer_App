@@ -1,26 +1,8 @@
 <% content_for :body_type do%>
 dashboard<% end %>
-	<h3>Welcome, <%= current_user.display_name %>!</h3>
 	
 <h3> Your current favorites:</h3>
 
-<table style="margin:auto; background-color: transparent;">
-	<tr>
-		<th>Movie Title</th>
-		<th>Rating</th>
-		<th>Comment</th>
-		<th>Delete</th>
-	</tr>
-
-	<% @favorite_movies.each do |x| %>
-	<tr>
-		<td><a href='/movies/<%= x.movie.imdbID%>'> <%= x.movie.title %> </a></td>
-		<td><%= x.rating %></td>
-		<td><%= x.comment %></td>
-		<td><%= link_to "Delete", destroy_favorite_path(x.id), method: :delete, data: { confirm: "You sure?" }, :class => "btn btn-danger"%></td>
-	</tr>
-	<% end %>
-</table>
 
 <br />
 
