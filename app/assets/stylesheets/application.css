@@ -14,95 +14,97 @@
  *= require_self
  */
 
-.sessionnew{
-	text-align: center;
-	background-image: url("http://i.imgur.com/llK0i55.jpg");
+
+.container-movie{
+	left: 16em;
+	position: relative;
+	width: 850px;
+	text-decoration:none;
+  	color:#000;
+  	background-color: rgba(238, 238, 238, 0.5);
+  	// background:rgba(33,33,33,.1);
+  	display:block;
+  	padding:1em;
+  	-moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
+  	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.container-results{
+  	background-color: rgba(238, 238, 238, 0.5);
+  	text-align: center;
+  	width: 850px;
+  	height: 550px;
+  	left: 16em;
+  	position: relative;
+  	-moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
+  	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.container-home{
+	background-color: rgba(238, 238, 238, 0.5);
+  	text-align: center;
+  	width: 850px;
+  	height: 550px;
+  	left: 16em;
+  	position: relative;
+  	-moz-box-shadow:5px 5px 7px rgba(33,33,33,.7);
+  	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.homelink{
+	position: relative;
+	left: 2em;
+	top: 1em;
+}
+
+body{
+	background-image: url("http://i.imgur.com/0RlGmeU.png");
 	background-size: cover;
-	color: white;
-	margin-top: 30px;
 }
 
-/*http://www.sweetpaul.com/wp-content/uploads/2012/11/binary-sunset.png*/
-
-img{
-	text-align: center;
-	margin-top: 40px;
+.containerinfo{
 }
 
-/*http://www.resolutionwall.com/wp-content/uploads/2014/03/futuristic-wallpaper-5.jpg*/
-/*http://abacusrx.us/Movie_background.jpg*/
-/*http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2012/11/Films.jpg*/
-/*http://hqwide.com/wallpapers/l/1280x800/38/artwork_the_avengers_hawkeye_movie_white_background_1280x800_37401.jpg*/
+ .movietitle{
+ 	left: 2em;
+ 	position: relative;
+ 	width: 800px;
+ }
 
-.dashboard{
-	text-align: center;
-	background-image: url("http://i.imgur.com/vqO5OeQ.jpg");
-	background-size: cover;
-	color: white;
+.movieplot{
+	left: 2em;
+ 	position: relative;
+	width: 800px;
 }
 
-.show{
-	text-align: center;
-	background-image: url("http://www.sweetpaul.com/wp-content/uploads/2012/11/binary-sunset.png");
-	background-size: cover;
-	color: white;
-	
-}
-
-.results{
-	text-align: center;
-	background-image: url("http://abacusrx.us/Movie_background.jpg");
-	background-size: cover;
-	color: white;
-}
-
-.usernew{
-	text-align: center;
-	background-image: url("http://www.resolutionwall.com/wp-content/uploads/2014/03/futuristic-wallpaper-5.jpg");
-	background-size: cover;
-	color: white;
-}
-
-.search{
-	margin-top: 40px;
-}
-
-a{text-decoration: underline; color: white;}
-a:visited {text-decoration: none}
-a:active {text-decoration: none}
-a:hover {text-decoration: underline; color: red;}
-
-input, select, textarea { 
-color: black; 
-}
-
-table {
-	border-spacing: 0.5rem;
-	text-align: center;
-}
-
-td{
- 	border: 1px solid #999;
-  	padding: 0.5rem;	
-}
-
-th {
-  border: 1px solid #999;
-  padding: 0.5rem;
-  text-align: center;
-}
+ .movieinfo{
+ 	left: 2em;
+ 	position: relative;
+ 	width: 800px;
+ }
 
 .poster{
-	float:left;
-	margin:0 0 10px 10px;
-	border: 5px solid gray;
+	float: left;
 }
 
-.favorites{
-	float: right;
-	margin: 0 0 20px 20px;
+.youtube{
+	position: relative;
+	left: 2em;
+	width: 800px;
 }
 
-.nav-pills{
-	float: right;
+.logo{
+	z-index: 1;
+	position: relative;
+	bottom: 7em;
 }
+
+.moviehome{
+	z-index: 10;
+	position: relative;
+	bottom: 15em;
+}
+

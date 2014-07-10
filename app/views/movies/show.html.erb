@@ -1,16 +1,14 @@
-<% content_for :body_type do%>
-show<% end %>
-	<div class="search">
-		<h1> Search Results:</h1>
-		<table style="margin:auto;">
-  			<tr>
-				<th> Movie</th>
-		<% @movies.each do |movie| %>
-			<tr>
-				<td><a href='/movies/<%= movie["imdbID"]%>'> <%= movie["Title"]%> <%= movie["Year"]%> </a></td>
-			</tr>
-		<%end%>
-		</table>
 
-<br />
+	
+<div class="container-results">
+	<div class="search">
+		<h1 style="text-align:center"> Search Results:</h1>
+		
+		<% @movies.each do |movie| %>
+		<ul>
+			<li style="list-style:none; font-size:22px"><a href='/movies/<%= movie["imdbID"]%>'> <%= movie["Title"]%> <%= movie["Year"]%> </a></li>
+		</ul>
+		<% end %>
+
 	</div>
+</div>
